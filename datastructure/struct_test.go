@@ -6,19 +6,26 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+type Rectangle struct {
+	heigth float64
+	width  float64
+}
+
 func TestPerimeter(t *testing.T) {
 	t.Run("check perimeter", func(t *testing.T) {
-		assert.Equal(t, 40.0, Perimeter(10.0, 10.0))
+		rectangle := &Rectangle{10.0, 10.0}
+		assert.Equal(t, 40.0, rectangle.Perimeter())
 	})
 	t.Run("check area calcualtion", func(t *testing.T) {
-		assert.Equal(t, 72.0, Area(12.0, 6))
+		rectangle := &Rectangle{12.0, 6}
+		assert.Equal(t, 72.0, rectangle.Area())
 	})
 }
 
-func Area(heigth float64, width float64) float64 {
-	return heigth * width
+func (r *Rectangle) Area() float64 {
+	return r.heigth * r.width
 }
 
-func Perimeter(heigth, width float64) float64 {
-	return 2 * (heigth + width)
+func (r *Rectangle) Perimeter() float64 {
+	return 2 * (r.heigth + r.width)
 }
