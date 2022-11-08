@@ -9,10 +9,10 @@ func TestHello(t *testing.T) {
 		}
 	}
 	t.Run("saying hello to people", func(t *testing.T) {
-		got := Hello("Chris")
-		want := "Hello, Chris"
+		current := Hello("Chris")
+		expected := "Hello, Chris"
 
-		assertMesg(got, want, t)
+		assertMesg(current, expected, t)
 
 	})
 	t.Run("say 'Hello, World' when empty string is supplied", func(t *testing.T) {
