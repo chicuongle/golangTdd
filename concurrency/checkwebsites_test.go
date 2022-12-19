@@ -33,12 +33,23 @@ func slowStubWebsiteChecker(_ string) bool{
 }
 
 func BenchmarkCheckWebsites(b *testing.B) {
-	urls := make([]string, 1000)
+	urls := make([]string, 10000)
 	for i := 0; i < len(urls); i++ {
 		urls[i] = "a url"
 	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		CheckWebsites(slowStubWebsiteChecker, urls)
+	}
+}
+
+func BenchmarkCheckWebsitesNoParallel(b *testing.B) {
+	urls := make([]string, 10000)
+	for i := 0; i < len(urls); i++ {
+		urls[i] = "a url"
+	}
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		CheckWebsitesNoParallel(slowStubWebsiteChecker, urls)
 	}
 }
