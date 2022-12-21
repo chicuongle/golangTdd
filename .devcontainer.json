@@ -1,11 +1,12 @@
 {
-    "image": "owncloud-repository:5000/echipdockerhub/dev_golang:0.3.2",
+    
+    "image": "echipdockerhub/baseworkspace:golang-1.0",
     "name": "golangDev",
     "appPort": [
         "8000:8000"
     ],
     "extensions": [
         "golang.Go"
-    ],
-    "mounts": ["source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"]
+    ]
+    // ,"mounts": ["source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"]
 }
