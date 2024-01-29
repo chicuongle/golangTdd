@@ -1,0 +1,15 @@
+{
+    
+    "image": "echipdockerhub/baseworkspace:golang-1.1.0",
+    "name": "golangDev",
+    "appPort": [
+        "8000:8000"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go"
+            ]
+        }
+    }
+}
