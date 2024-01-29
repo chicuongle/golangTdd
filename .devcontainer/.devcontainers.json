@@ -5,8 +5,11 @@
     "appPort": [
         "8000:8000"
     ],
-    "extensions": [
-        "golang.Go"
-    ]
-    // ,"mounts": ["source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"]
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go"
+            ]
+        }
+    }
 }
