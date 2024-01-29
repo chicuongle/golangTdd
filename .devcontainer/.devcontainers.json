@@ -1,0 +1,12 @@
+{
+    
+    "image": "echipdockerhub/baseworkspace:golang-1.0.2",
+    "name": "golangDev",
+    "appPort": [
+        "8000:8000"
+    ],
+    "extensions": [
+        "golang.Go"
+    ]
+    // ,"mounts": ["source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"]
+}
