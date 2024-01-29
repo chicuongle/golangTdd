@@ -1,6 +1,6 @@
 {
     
-    "image": "echipdockerhub/baseworkspace:golang-1.1.1",
+    "image": "echipdockerhub/baseworkspace:golang-1.1.2",
     "name": "golangDev",
     "appPort": [
         "8000:8000"
